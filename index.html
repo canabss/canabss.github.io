@@ -450,7 +450,7 @@
             const filename = 'assets/resume/james-canaber.pdf';
 
             const link = document.createElement('a');
-            link.download = filename;
+            link.href = filename;
 
             document.body.appendChild(link);
             link.click();

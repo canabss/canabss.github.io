@@ -47,7 +47,7 @@
                     <img class="banner" data-aos="fade-right" src="assets/images/profile-me.png" alt="Profile Image">
                     <div class="button-container align-items-center text-center" data-aos="fade-left">
                         <p class="typed-text text-center align-items-center"><span class="hello">Hello!</span> I'm James Canaber <span class="wave">👋</span></p>
-                        <p class="job-title">Developer</p>
+                        <p class="job-title">SQL | BI Developer</p>
                         <a href="#" class="download" id="download-resume"><i class="fa fa-download"></i> Download Resume</a>
                     </div>
                 </div>
@@ -443,18 +443,9 @@
             autoplay: true,
             autoplaySpeed: 3000,
         });
-
-        document.getElementById('download-resume').addEventListener('click', function(e){
-            e.preventDefault();
-
-            const filename = 'assets/resume/james-canaber.pdf';
-
-            const link = document.createElement('a');
-            link.href = filename;
-
-            document.body.appendChild(link);
-            link.click();
-            document.body.removeChild(link);
+        $('#download-resume').click(function(e) {
+            e.preventDefault();  //stop the browser from following
+            window.location.href = 'assets/resume/james-canaber.pdf';
         });
     </script>
 </body>
